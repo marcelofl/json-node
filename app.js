@@ -10,7 +10,7 @@ const convertModel = require('./models/convertModel')
 // Atividade 05
 
 //Questão 1
-
+//Rota lista de alunos 
 app.get('/alunos/todos', (req, res) => {
 	let alunos = [
 		{'Nome': 'Marcelo', 'Curso':'Sistemas de Informação'},

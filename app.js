@@ -22,6 +22,7 @@ app.get('/alunos/todos', (req, res) => {
 
 //Questão 2
 
+// Rota responsável por receber o valor a ser convertido
 app.get('/moeda/:valor_real', convertModel.obterValor)
 
 app.listen(3000)

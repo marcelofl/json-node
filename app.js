@@ -22,11 +22,8 @@ app.get('/alunos/todos', (req, res) => {
 
 //Questão 2
 // Rota responsável por receber o valor a ser convertido
-
 app.get('/moeda/:valor_real', convertModel.obterValor)
 
-
-
-app.listen(3000, () => {
-	console.log('Server rodando na porta 3000!')
-})
+app.listen(process.env.PORT || 3000, function() {
+	console.log('App rodando na porta 3000!')
+})	

@@ -1,13 +1,15 @@
 const express = require('express')
 const app = express()
-
-const body = require('body-parser')
-const { urlencoded} = require('body-parser')
-app.use(body.json())
+const cors = require('cors')
 
 const convertModel = require('./models/convertModel')
 
-// Atividade 05
+app.use(cors({
+	origin: '*',
+}))
+
+
+// *** Atividade 05 ***
 
 //Questão 1
 //Rota lista de alunos 
@@ -24,6 +26,6 @@ app.get('/alunos/todos', (req, res) => {
 // Rota responsável por receber o valor a ser convertido
 app.get('/moeda/:valor_real', convertModel.obterValor)
 
-app.listen(process.env.PORT || 3000, function() {
+app.listen((process.env.PORT || 3000), function() {
 	console.log('App rodando na porta 3000!')
 })	

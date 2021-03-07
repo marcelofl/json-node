@@ -1,6 +1,5 @@
 const fetch = require('node-fetch')
 
-
 function obterValor(req, res) {
 	let url = 'https://economia.awesomeapi.com.br/json/BRL-USD' 	
 	fetch(url)		
